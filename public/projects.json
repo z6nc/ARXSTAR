@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Traductor Español → Quechua",
+    "description": "Web app con IA para traducción",
+    "tech": ["JavaScript", "IA", "Quechua"],
+    "url": "https://traductor-quechua.vercel.app",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Radio Peruana Online",
+    "description": "Streaming + web optimizada",
+    "tech": ["React", "HTML", "CSS"],
+    "url": "https://radioperuana.pe",
+    "featured": false
+  }
+]

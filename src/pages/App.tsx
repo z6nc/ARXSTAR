@@ -3,7 +3,7 @@ import HeroSection from "../main/components/herosection"
 import AboutSection from "../main/components/aboutSection"
 import { PortfolioContainer } from "../main/components/Container/portafolioContainer"
 import SocialHub from "../main/components/socialHub"
-import Footer from "../main/components/footer"
+import Footer from "../main/components/Footer/footer"
 function App() {
 
   return (

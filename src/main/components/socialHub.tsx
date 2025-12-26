@@ -12,7 +12,7 @@ import { SocialLink } from '../common/SocialLink';
 
 const SocialHub = () => {
   return (
-    <section className="relative py-36 h-auto lg:h-max w-full  bg-black overflow-hidden">
+    <section className="relative py-36 h-auto lg:h-max  2xl:h-screen w-full  bg-black overflow-hidden">
        
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

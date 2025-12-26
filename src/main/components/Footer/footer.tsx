@@ -29,10 +29,7 @@ const Footer = () => {
                 ARX<span className="text-slate-600">STAR</span>
               </span>
             </a>
-            <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
-              Diseñando interfaces del futuro y construyendo sistemas escalables. 
-              <br /> Lima, Perú.
-            </p>
+          
           </div>
 
           {/* 2. NAVEGACIÓN RÁPIDA (Grid simple) */}
@@ -41,7 +38,6 @@ const Footer = () => {
               <span className="text-xs font-mono uppercase text-slate-600 tracking-widest mb-1">Explorar</span>
               <a href="#inicio" className="hover:text-white transition-colors">Inicio</a>
               <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#projects" className="hover:text-white transition-colors">Proyectos</a>
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-xs font-mono uppercase text-slate-600 tracking-widest mb-1">Categorías</span>

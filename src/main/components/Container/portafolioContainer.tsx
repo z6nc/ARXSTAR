@@ -1,5 +1,5 @@
 import { CategorySection } from "./categoriaSection";
-import { Code2, Cpu, Users } from "lucide-react";
+import { itemsNavbar } from "../../../data/itemsNavbar";
 export const PortfolioContainer = () => {                          
     // Datos simulados por categoría
     const devProjects = [
@@ -24,27 +24,26 @@ export const PortfolioContainer = () => {
     ];
 
     return (
-        <section className="bg-white w-full relative">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem]  pointer-events-none" />
+        <section className="bg-transparent w-full relative">
 
             {/* SECCIÓN 1: DEV */}
             <CategorySection
-                title="Dev"
-                icon={Code2}
+                title={itemsNavbar[0].title}
+                icon={() => itemsNavbar[0].icon}
                 projects={devProjects}
             />
 
             {/* SECCIÓN 2: TECH */}
             <CategorySection
-                title="Tech"
-                icon={Cpu}
+                title={itemsNavbar[1].title}
+                icon={() => itemsNavbar[1].icon}
                 projects={techProjects}
             />
 
             {/* SECCIÓN 3: LIDERAZGO */}
             <CategorySection
-                title="Liderazgo"
-                icon={Users}
+                title={itemsNavbar[2].title}
+                icon={() => itemsNavbar[2].icon}
                 projects={leadershipProjects}
             />
         

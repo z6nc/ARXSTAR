@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import type { JSX } from "react";
+import { Link } from "react-router-dom";
 interface MobileNavbarProps {
     isMobileMenuOpen: boolean;
     setIsMobileMenuOpen: (open: boolean) => void;
@@ -33,17 +34,17 @@ export const MobileNavbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, itemsNavba
                     {/* Mobile Content */}
                     <div className="flex-1 overflow-y-auto px-5 py-6 space-y-6">
                         <div className="space-y-4">
-                            <a href="#inicio" className="text-xl font-bold text-slate-900 hover:text-blue-600 block">Inicio</a>
-                            <a href="#about" className="text-xl font-bold text-slate-900 hover:text-blue-600 block">About</a>
+                            <Link to="/" className="text-xl font-bold text-slate-900 hover:text-blue-600 block">Inicio</Link>
+                            <Link to="/about" className="text-xl font-bold text-slate-900 hover:text-blue-600 block">About</Link>
                         </div>
 
                         <div className="pt-6 border-t border-slate-100">
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Categorías ARX</p>
                             <div className="space-y-2">
                                 {itemsNavbar.map((item, idx) => (
-                                    <a
+                                    <Link
                                         key={idx}
-                                        href={item.url}
+                                        to={item.url}
                                         className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 hover:bg-blue-50 transition-colors group"
                                     >
                                         <div className="text-slate-500 group-hover:text-blue-600">
@@ -53,7 +54,7 @@ export const MobileNavbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, itemsNavba
                                         <span className="font-medium text-slate-700 group-hover:text-blue-700">
                                             {item.title}
                                         </span>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -61,9 +62,9 @@ export const MobileNavbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, itemsNavba
 
                     {/* Mobile Footer */}
                     <div className="p-5 border-t border-slate-100 bg-slate-50">
-                        <a href="#contact" className="flex items-center justify-center w-full py-3 rounded-lg bg-slate-900 text-white font-bold text-sm uppercase tracking-widest">
+                        <Link to="#contact" className="flex items-center justify-center w-full py-3 rounded-lg bg-slate-900 text-white font-bold text-sm uppercase tracking-widest">
                             Contactar
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

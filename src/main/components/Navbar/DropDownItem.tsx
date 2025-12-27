@@ -21,7 +21,7 @@ export const DropdownItem = ({ icon: IconOrNode, title, description, href = "#" 
     </div>
     <div>
       <h4 className="text-sm font-bold text-slate-800 group-hover:text-blue-700">{title}</h4>
-      <p className="text-[11px] text-slate-500 mt-0.5 leading-tight">{description}</p>
+      <p className="text-[11px] text-slate-500 mt-0.5 leading-tight overflow-hidden w-[20%] whitespace-nowrap text-ellipsis">{description}</p>
     </div>
   </a>
 );

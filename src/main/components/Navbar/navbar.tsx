@@ -5,9 +5,10 @@ import {
   ChevronDown,
   Zap
 } from 'lucide-react';
-import { MobileNavbar } from './Navbar/MobileOverlay';
-import { itemsNavbar } from '../../data/itemsNavbar';
-import { DropdownItem } from './Navbar/DropDownItem';
+import { Link } from 'react-router-dom';
+import { MobileNavbar } from './MobileOverlay';
+import { itemsNavbar } from '../../../data/itemsNavbar';
+import { DropdownItem } from './DropDownItem';
 // --- COMPONENTE PRINCIPAL ---
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled
         ? 'bg-black/80 backdrop-blur-md border-white/10 py-4 shadow-lg' // Estado Scroll: Vidrio Negro
-        : 'bg-transparent border-transparent py-6' // Estado Top: Transparente
+        : 'bg-slate-950 border-transparent py-6' // Estado Top: Transparente
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,14 +38,11 @@ const Navbar = () => {
           {/* 1. LOGO SECTION */}
           <a href="#" className="flex shrink-0 items-center gap-2 cursor-pointer group">
             {/* Icono animado del logo */}
-            <div className={`p-1.5 rounded-lg border transition-colors duration-300 ${isScrolled
-              ? 'bg-white/10 border-white/20 text-white'
-              : 'bg-white text-black border-white'
-              }`}>
+            <div className={`p-1.5 rounded-lg border transition-colors duration-300 bg-white text-black border-white`}>
               <Zap size={16} className={`fill-current ${!isScrolled && 'text-black'}`} />
             </div>
 
-            <span className={`font-black text-xl tracking-tighter transition-colors ${isScrolled ? 'text-white' : 'text-slate-900'
+            <span className={`font-black text-xl tracking-tighter transition-colors ${isScrolled ? 'text-white' : 'text-sky-300'
               }`}>
               ARX <span className={isScrolled ? "text-slate-400" : "text-slate-600"}>STAR</span>
             </span>
@@ -53,11 +51,11 @@ const Navbar = () => {
           {/* 2. DESKTOP NAVIGATION */}
           <div className="hidden md:flex items-center space-x-8">
             {/* Pasamos clases dinámicas según scroll para legibilidad */}
-            <div className={`flex items-center gap-8 ${isScrolled ? 'text-slate-300' : 'text-slate-600'}`}>
+            <div className={`flex items-center gap-8 text-slate-300 `}>
 
               {/* Items directos con ajuste de color manual si no usas el componente NavItem Wrapper para todo */}
-              <a href="#inicio" className="text-sm font-medium hover:text-blue-500 transition-colors">Inicio</a>
-              <a href="#about" className="text-sm font-medium hover:text-blue-500 transition-colors">About</a>
+              <Link to="/" className="text-sm font-medium hover:text-blue-500 transition-colors">Inicio</Link>
+              <Link to="/about" className="text-sm font-medium hover:text-blue-500 transition-colors">About</Link>
 
               {/* Dropdown de Categorías */}
               <div
@@ -106,23 +104,13 @@ const Navbar = () => {
               </div>
 
             </div>
-
-            {/* Botón de Acción (Call to Action) en el Navbar */}
-            <a href="#contact" className={`hidden lg:inline-flex px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border transition-all ${isScrolled
-              ? 'border-white/20 text-white hover:bg-white hover:text-black'
-              : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
-              }`}>
-              Get Started
-            </a>
-
           </div>
 
           {/* 3. MOBILE MENU BUTTON */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md focus:outline-none transition-colors ${isScrolled ? 'text-white hover:bg-white/10' : 'text-slate-900 hover:bg-slate-100'
-                }`}
+              className={`p-2 rounded-md focus:outline-none transition-colors text-white hover:bg-white `}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

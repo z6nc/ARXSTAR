@@ -18,7 +18,7 @@ export const CategorySection = ({ title, icon: Icon, projects }: CategorySection
         "Liderazgo": "#D97706"
     }
     return (
-        <article className="w-full py-16 border-b border-slate-100 last:border-0 relative">
+        <article className="w-full py-16 relative">
 
             <div className="max-w-7xl mx-auto px-6 pl-12">
                 {/* Cabecera de Categoría */}

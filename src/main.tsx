@@ -6,6 +6,7 @@ import Navbar from './main/components/Navbar/navbar'
 import Footer from './main/components/Footer/footer'
 import './css/index.css'
 import App from './App'
+import { Analytics } from '@vercel/analytics/react' 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')!).render(
         <Footer />
       </BrowserRouter>
     </HelmetProvider>
+    <Analytics />
   </StrictMode>,
 )

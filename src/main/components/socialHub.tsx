@@ -77,7 +77,7 @@ const SocialSection = () => {
             <span>Network Protocol</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900">
-            Únete al <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-800 to-slate-400">Ecosistema.</span>
+            Únete al Ecosistema
           </h2>
         </div>
 

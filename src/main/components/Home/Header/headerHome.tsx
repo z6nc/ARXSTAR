@@ -2,7 +2,7 @@ import { NucleoDigital } from "../../../common/NucleoDigital"
 export function HeaderHome() {
     return (
 
-        <header className="relative w-full  h-max lg:h-screen bg-slate-950 overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+        <header className="relative w-full  h-max 2xl:h-screen bg-slate-950 overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
 
             {/* Patrón de fondo de circuitos */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-size-[3rem_3rem] opacity-20 pointer-events-none"></div>

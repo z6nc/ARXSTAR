@@ -72,3 +72,22 @@ export default defineConfig([
 ])
 ```
 # ARX_STAR
+
+## SEO y Auditoría
+
+- Configura el dominio de producción creando un archivo `.env` con:
+
+```
+VITE_SITE_URL=https://tu-dominio.com
+```
+
+- Actualiza `public/robots.txt` y `public/sitemap.xml` con tu dominio real si no usas la variable.
+
+- Instala dependencias y ejecuta la auditoría Lighthouse (requiere Node):
+
+```bash
+npm install
+npm run seo:audit
+```
+
+El reporte se guardará en `.lighthouseci/` como archivos HTML/JSON que puedes abrir en el navegador.
